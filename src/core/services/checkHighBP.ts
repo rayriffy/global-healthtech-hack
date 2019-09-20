@@ -1,0 +1,1 @@
+export const checkHighBP = (SBP: number, DBP: number): boolean => SBP >= 140 || DBP >= 90
