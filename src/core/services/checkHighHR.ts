@@ -7,5 +7,15 @@ export const checkHighHR = (age: number, heartrate: number): boolean => {
     return heartrate > 157
   } else if (age >= 45 && age < 50) {
     return heartrate > 153
+  } else if (age >= 50 && age < 55) {
+    return heartrate > 149
+  } else if (age >= 55 && age < 60) {
+    return heartrate > 145
+  } else if (age >= 60 && age < 65) {
+    return heartrate > 140
+  } else if (age >= 65 && age < 70) {
+    return heartrate > 136
+  } else if (age >= 70) {
+    return heartrate > 128
   }
 }

@@ -1,1 +1,1 @@
-export const checkHighBP = (SBP: number, DBP: number): boolean => SBP <= 110 || DBP <= 70
+export const checkLowBP = (SBP: number, DBP: number): boolean => SBP <= 110 || DBP <= 70
