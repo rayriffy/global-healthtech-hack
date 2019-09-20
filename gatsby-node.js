@@ -9,7 +9,9 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   const {createPage} = actions
 
   // Node transform
-  const fetchedFoods = databaseFoods.map(async food => {
+  const fetchedFoods = []
+  
+  const fetchedFoodsPromise = databaseFoods.map(async food => {
     const gqlResult = await graphql(`
       {
         banner: file(relativePath: {eq: "${food.id}.jpg"}) {
@@ -29,15 +31,13 @@ exports.createPages = async ({graphql, actions, reporter}) => {
       }
     `)
 
-    return {
+    return fetchedFoods.push({
       raw: food,
       image: gqlResult.data.banner
-    }
+    })
   })
 
-  await Promise.all(fetchedFoods)
-
-  console.log(fetchedFoods)
+  await Promise.all(fetchedFoodsPromise)
 
   // Create listing for databaseFoods
   createPage({
@@ -51,7 +51,7 @@ exports.createPages = async ({graphql, actions, reporter}) => {
   // Create food pages
   fetchedFoods.map(node => {
     createPage({
-      path: `/food/${node.data.id}`,
+      path: `/food/${node.raw.id}`,
       component: path.resolve(`./src/templates/food/viewing/components/index.tsx`),
       context: {
         data: node,
