@@ -1,6 +1,8 @@
 import React from 'react'
 
-const FoodViewingComponent: React.FC = props => {
+import { IProps } from '../@types/IProps'
+
+const FoodViewingComponent: React.FC<IProps> = props => {
   return (
     <>OK</>
   )

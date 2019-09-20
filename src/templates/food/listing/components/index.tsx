@@ -1,6 +1,8 @@
 import React from 'react'
 
-const FoodListingComponent: React.FC = props => {
+import { IProps } from '../@types/IProps'
+
+const FoodListingComponent: React.FC<IProps> = props => {
   return (
     <>OK</>
   )
