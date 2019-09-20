@@ -12,4 +12,6 @@ export interface IUser {
     }
     heartrate: number
   }
+  diabetes: boolean
+  allergies: string[]
 }
