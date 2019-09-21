@@ -44,7 +44,7 @@ const FoodListingComponent: React.FC<IProps> = props => {
 
   return (
     <Flex justifyContent={`center`}>
-      <Box width={[21/24, 16/24, 12/24, 8/24]}>
+      <Box width={[21/24, 16/24, 12/24, 10/24]}>
         <Flex flexWrap={`wrap`}>
           {data.map(node => {
             return (
