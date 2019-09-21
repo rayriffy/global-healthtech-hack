@@ -2,7 +2,7 @@ import _ from 'lodash'
 import React, { useContext, useEffect, useState } from 'react'
 
 import AnimatedNumber from 'animated-number-react'
-import { FaPhone } from 'react-icons/fa'
+import { FaPhone, FaTimesCircle } from 'react-icons/fa'
 
 import Img from 'gatsby-image'
 
@@ -150,8 +150,16 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                 </Flex>
               ) : eatOption === 1 ? (
                 <Box>
-                  <Text fontSize={18} fontWeight={700}>PREPARATION</Text>
-                  <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>For {data.raw.serving} servings</Text>
+                  <Flex alignItems={`center`}>
+                    <Box>
+                      <Text fontSize={18} fontWeight={700}>PREPARATION</Text>
+                      <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>For {data.raw.serving} servings</Text>
+                    </Box>
+                    <Box mx={`auto`} />
+                    <Box px={3} onClick={() => setEatOption(0)}>
+                      <FaTimesCircle size={`20px`} />
+                    </Box>
+                  </Flex>
                   <Box p={3}>
                     <BorderedCard p={3}>
                       {data.raw.preparation.map((step, i) => {
@@ -167,8 +175,16 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                 </Box>
               ) : eatOption === 2 ? (
                 <Box>
-                  <Text fontSize={18} fontWeight={700}>FIND STORE</Text>
-                  <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>Found 1 store</Text>
+                  <Flex alignItems={`center`}>
+                    <Box>
+                      <Text fontSize={18} fontWeight={700}>FIND STORE</Text>
+                      <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>Found 1 store</Text>
+                    </Box>
+                    <Box mx={`auto`} />
+                    <Box onClick={() => setEatOption(0)}>
+                      <FaTimesCircle size={`20px`} />
+                    </Box>
+                  </Flex>
                   <Box p={3}>
                     <BorderedCard>
                       <Box height={`150px`}>
