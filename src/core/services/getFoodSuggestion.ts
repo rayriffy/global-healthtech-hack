@@ -12,7 +12,8 @@ import { getAge } from './getAge'
 import { IFetchedFood } from '../@types/IFetchedFood'
 import { IUser } from '../@types/IUser'
 
-const normEnergy = 667, normCarb = 75, normFat = 20, normNa = 585
+const normEnergy = 450, normCarb = 75, normFat = 20, normNa = 585
+
 let recommendEnergy = normEnergy, recommendCarb = normCarb, recommendFat = normFat, recommendNa = normNa
 
 export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedFood[] => {
@@ -29,8 +30,6 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
     const HighHR = checkHighHR(getAge(user.birthday), heartrate)
     const LowHR = checkLowHR(getAge(user.birthday), heartrate)
     const Diabetes = user.diabetes
-
-    console.log(getAge(user.birthday))
   
     const Allergies = user.allergies
     
@@ -75,8 +74,8 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
     const inRangeFoodEnergy = _.filter(filteredFood, food => food.raw.fact.energy <= recommendEnergy + 175 && food.raw.fact.energy >= recommendEnergy - 175)
     const inRangeFoodCarb = _.filter(filteredFood, food => food.raw.nutrients.carbohydrate <= recommendCarb + 25 && food.raw.nutrients.carbohydrate >= recommendCarb - 25)
     const inRangeFoodFat = _.filter(filteredFood, food => food.raw.nutrients.fat <= recommendFat + 6 && food.raw.nutrients.fat >= recommendFat - 6)
-    const inRangeFoodNa = _.filter(filteredFood, food => food.raw.fact.sodium <= recommendNa + 250 && food.raw.fact.sodium >= recommendNa - 250)
-    const inRangeforDiabetes = _.filter(inRangeFoodCarb, food => food.raw.fact.sodium <= recommendNa + 250 && food.raw.fact.sodium >= recommendNa - 250) 
+    const inRangeFoodNa = _.filter(filteredFood, food => food.raw.fact.sodium <= recommendNa + 100 && food.raw.fact.sodium >= recommendNa - 100)
+    const inRangeforDiabetes = _.filter(inRangeFoodCarb, food => food.raw.nutrients.carbohydrate <= recommendCarb + 25 && food.raw.nutrients.carbohydrate >= recommendCarb - 25) 
 
     const outRangeFoodEnergy = _.xor(filteredFood, inRangeFoodEnergy)
     const outRangeFoodCarb = _.xor(filteredFood, inRangeFoodCarb)

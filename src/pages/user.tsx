@@ -15,7 +15,7 @@ import InputLabel from '@material-ui/core/InputLabel'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 
-import { UserData } from '../app/context'
+import { Subtitle, UserData } from '../app/context'
 
 import { IUser } from '../core/@types/IUser'
 
@@ -32,6 +32,7 @@ const BorderedCard = styled(Card)`
 
 const UserComponent: React.FC = props => {
   const [userData, setUserData] = useContext(UserData)
+  const [, setSubtitle] = useContext(Subtitle)
 
   const defaultInput: IUser = {
     name: null,
@@ -63,6 +64,8 @@ const UserComponent: React.FC = props => {
   }
 
   useEffect(() => {
+    setSubtitle('user')
+
     if (userData !== null) {
       setInput(userData)
     }
@@ -170,7 +173,7 @@ const UserComponent: React.FC = props => {
                         color="primary"
                       />
                     </Box>
-                    <Text fontSize={16} px={1}>I am diabetes</Text>
+                    <Text fontSize={16} px={1}>I have diabetes</Text>
                   </Flex>
                 </Box>
                 <Text pt={3} fontSize={20} fontWeight={500}>Blood pressure</Text>
@@ -224,7 +227,7 @@ const UserComponent: React.FC = props => {
                               color="primary"
                             />
                           </Box>
-                          <Text fontSize={16} px={1}>{allergy.name}</Text>
+                          <Text fontSize={14} px={1}>{allergy.name}</Text>
                         </Flex>
                       </Box>
                     )

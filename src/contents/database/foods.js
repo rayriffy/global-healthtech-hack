@@ -497,7 +497,7 @@ module.exports = [
       'Add sliced banana and almonds to taste.',
       'Enjoy!'
     ],
-    allergies: ['gluten']
+    allergies: ['gluten', 'nut-protein']
   },
   {
     id: 'spinach-and-feta-baked-egg-cups',
@@ -593,7 +593,7 @@ module.exports = [
       'Serve now or refrigerate in airtight container up to 3-4 days.',
       'Enjoy!'
     ],
-    allergies: []
+    allergies: ['seafood-protein']
   },
   {
     id: 'one-pan-roasted-veggie-salad-bowl',
@@ -1221,7 +1221,7 @@ module.exports = [
       'Toast in a large skillet set over medium heat.',
       'Enjoy!'
     ],
-    allergies: ['chithin','gluten']
+    allergies: ['chitin','gluten']
   },
   {
     id: 'wolfgang-puck-sea-bass-in-puff-pastry',
@@ -1323,6 +1323,6 @@ module.exports = [
       'To serve, cut the fish into individual portions and plate with a drizzle of Chive Butter Sauce.',
       'Enjoy!'
     ],
-    allergies: ['chithin','lactose','gluten']
+    allergies: ['chitin','lactose','gluten', 'seafood-protein']
   },
 ]
