@@ -62,6 +62,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
               </Box>
               <Box py={2}>
                 <Text fontSize={18} fontWeight={700}>NUTRIENTS</Text>
+                <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>For serving</Text>
                 <Box p={3}>
                   <BorderedCard p={3}>
                     <List name={`Carbohydrate`} desc={`${data.raw.nutrients.carbohydrate} g`} />
@@ -71,6 +72,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
               </Box>
               <Box py={2}>
                 <Text fontSize={18} fontWeight={700}>INGREDENTS</Text>
+                <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>For {data.raw.serving} servings</Text>
                 <Box p={3}>
                   <BorderedCard p={3}>
                     {_.sortBy(data.raw.ingredents, o => _.capitalize(o.name)).map(ingredent => {
