@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { FaFire } from 'react-icons/fa'
 
 import Img from 'gatsby-image'
@@ -6,11 +6,14 @@ import Img from 'gatsby-image'
 import { Box, Flex, Card, Text } from 'rebass'
 import styled from 'styled-components'
 
-import { Subtitle } from '../../../../app/context'
+import { UserData, Subtitle } from '../../../../app/context'
 
 import TransparentLink from '../../../../core/components/transparentLink'
 
+import { getFoodSuggestion } from '../../../../core/services/getFoodSuggestion'
+
 import { IProps } from '../@types/IProps'
+import { IFetchedFood } from '../../../../core/@types/IFetchedFood'
 
 interface IGatsbyImage {
   height?: number
@@ -36,17 +39,22 @@ const PosterCard = styled(Card)`
 const FoodListingComponent: React.FC<IProps> = props => {
   const {data} = props.pageContext
 
+  const [foods, setFoods] = useState<IFetchedFood[]>([])
+
   const [, setSubtitle] = useContext(Subtitle)
+  const [userData] = useContext(UserData)
 
   useEffect(() => {
     setSubtitle('listing')
+
+    setFoods(getFoodSuggestion(userData, data))
   }, [])
 
   return (
     <Flex justifyContent={`center`} py={4}>
       <Box width={22 / 24}>
         <Flex flexWrap={`wrap`}>
-          {data.map(node => {
+          {foods.map(node => {
             return (
               <Box width={[1 / 2, 1 / 3, 1 / 3, 1 /4]} p={[1, 2]} key={`card-food-${node.raw.id}`}>
                 <TransparentLink to={`/food/${node.raw.id}`}>
