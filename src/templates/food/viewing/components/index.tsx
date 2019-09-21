@@ -58,14 +58,14 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                       <Flex>
                         <Text fontSize={14} fontWeight={500}>Carbohydrate</Text>
                         <Box mx={`auto`} />
-                        <Text fontSize={14}>{data.raw.nutrients.carbohydrate}</Text>
+                        <Text fontSize={14}>{data.raw.nutrients.carbohydrate} g</Text>
                       </Flex>
                     </Box>
                     <Box pt={1}>
                       <Flex>
                         <Text fontSize={14} fontWeight={500}>Fat</Text>
                         <Box mx={`auto`} />
-                        <Text fontSize={14}>{data.raw.nutrients.fat}</Text>
+                        <Text fontSize={14}>{data.raw.nutrients.fat} g</Text>
                       </Flex>
                     </Box>
                   </BorderedCard>
