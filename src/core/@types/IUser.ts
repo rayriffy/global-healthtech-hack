@@ -1,6 +1,6 @@
 export interface IUser {
   name: string
-  age: number
+  birthday: string
   gender: 'm' | 'f'
   body: {
     weight: number
