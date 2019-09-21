@@ -75,7 +75,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                   <BorderedCard p={3}>
                     {_.sortBy(data.raw.ingredents, o => _.capitalize(o.name)).map(ingredent => {
                       return (
-                        <List name={_.capitalize(ingredent.name)} desc={ingredent.amount !== null ? `${_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)} ${ingredent.unit}` : null} />
+                        <List name={_.capitalize(ingredent.name)} desc={ingredent.amount !== null ? `${_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)}${ingredent.unit !== null ? ` ${ingredent.unit}` : ''}` : null} />
                       )
                     })}
                   </BorderedCard>
