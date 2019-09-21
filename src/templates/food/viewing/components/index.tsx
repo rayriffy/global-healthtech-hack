@@ -1,10 +1,12 @@
 import _ from 'lodash'
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import Img from 'gatsby-image'
 
 import { Box, Card, Flex, Text } from 'rebass'
 import styled from 'styled-components'
+
+import { Subtitle } from '../../../../app/context'
 
 import { IProps } from '../@types/IProps'
 
@@ -22,6 +24,12 @@ const BorderedCard = styled(Card)`
 
 const FoodViewingComponent: React.FC<IProps> = props => {
   const {data} = props.pageContext
+
+  const [, setSubtitle] = useContext(Subtitle)
+
+  useEffect(() => {
+    setSubtitle('reading')
+  }, [])
 
   return (
     <Flex justifyContent={`center`} py={3}>
@@ -75,13 +83,13 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                 <Text fontSize={18} fontWeight={700}>INGREDENTS</Text>
                 <Box p={3}>
                   <BorderedCard p={3}>
-                    {data.raw.ingredents.map(ingredent => {
+                    {_.sortBy(data.raw.ingredents, o => _.capitalize(o.name)).map(ingredent => {
                       return (
                         <Box pt={1}>
                           <Flex>
-                            <Text fontSize={14} fontWeight={500}>{ingredent.name}</Text>
+                            <Text fontSize={14} fontWeight={500}>{_.capitalize(ingredent.name)}</Text>
                             <Box mx={`auto`} />
-                            {ingredent.amount !== null ? <Text fontSize={14}>{ingredent.amount} {ingredent.unit}</Text> : null}
+                            {ingredent.amount !== null ? <Text fontSize={14}>{_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)} {ingredent.unit}</Text> : null}
                           </Flex>
                         </Box>
                       )

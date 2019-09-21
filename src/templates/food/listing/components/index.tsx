@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { FaFire } from 'react-icons/fa'
 
 import Img from 'gatsby-image'
 
 import { Box, Flex, Card, Text } from 'rebass'
 import styled from 'styled-components'
+
+import { Subtitle } from '../../../../app/context'
 
 import TransparentLink from '../../../../core/components/transparentLink'
 
@@ -33,6 +35,12 @@ const PosterCard = styled(Card)`
 
 const FoodListingComponent: React.FC<IProps> = props => {
   const {data} = props.pageContext
+
+  const [, setSubtitle] = useContext(Subtitle)
+
+  useEffect(() => {
+    setSubtitle('listing')
+  }, [])
 
   return (
     <Flex justifyContent={`center`}>
