@@ -8,6 +8,8 @@ import styled from 'styled-components'
 
 import { Subtitle } from '../../../../app/context'
 
+import List from './list'
+
 import { IProps } from '../@types/IProps'
 
 const CoverCard = styled(Card)`
@@ -62,20 +64,8 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                 <Text fontSize={18} fontWeight={700}>NUTRIENTS</Text>
                 <Box p={3}>
                   <BorderedCard p={3}>
-                    <Box pt={1}>
-                      <Flex>
-                        <Text fontSize={14} fontWeight={500}>Carbohydrate</Text>
-                        <Box mx={`auto`} />
-                        <Text fontSize={14}>{data.raw.nutrients.carbohydrate} g</Text>
-                      </Flex>
-                    </Box>
-                    <Box pt={1}>
-                      <Flex>
-                        <Text fontSize={14} fontWeight={500}>Fat</Text>
-                        <Box mx={`auto`} />
-                        <Text fontSize={14}>{data.raw.nutrients.fat} g</Text>
-                      </Flex>
-                    </Box>
+                    <List name={`Carbohydrate`} desc={`${data.raw.nutrients.carbohydrate} g`} />
+                    <List name={`Fat`} desc={`${data.raw.nutrients.fat} g`} />
                   </BorderedCard>
                 </Box>
               </Box>
@@ -85,13 +75,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                   <BorderedCard p={3}>
                     {_.sortBy(data.raw.ingredents, o => _.capitalize(o.name)).map(ingredent => {
                       return (
-                        <Box pt={1}>
-                          <Flex>
-                            <Text fontSize={14} fontWeight={500}>{_.capitalize(ingredent.name)}</Text>
-                            <Box mx={`auto`} />
-                            {ingredent.amount !== null ? <Text fontSize={14}>{_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)} {ingredent.unit}</Text> : null}
-                          </Flex>
-                        </Box>
+                        <List name={_.capitalize(ingredent.name)} desc={ingredent.amount !== null ? `${_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)} ${ingredent.unit}` : null} />
                       )
                     })}
                   </BorderedCard>
