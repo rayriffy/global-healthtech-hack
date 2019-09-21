@@ -73,7 +73,7 @@ module.exports = [
   {
   id: 'tofu-buddha-bowl',
     name: 'Tofu Buddha Bowl',
-    desc: ' ',
+    desc: null,
     serving: 6,
     fact: {
       energy: 957,
@@ -155,7 +155,7 @@ module.exports = [
   {
       id: 'one-pan-roasted-chicken-and-sweet-potatoes',
       name: 'One-pan Roasted Chicken And Sweet Potatoes',
-      desc: '',
+      desc: null,
       serving: 1,
       fact: {
         energy: 181,
@@ -222,7 +222,7 @@ module.exports = [
   {
     id: 'one-pan-chicken-parmesan-and-veggie-skillet',
     name: 'One-pan Chicken Parmesan and Veggie Skillet',
-    desc: '',
+    desc: null,
     serving: 1,
     fact: {
       energy: 409,
@@ -289,7 +289,7 @@ module.exports = [
   {
     id: 'sheet-tray-fajitas-rice-bowl',
     name: 'Sheet Tray Fajitas Rice Bowl',
-    desc: '',
+    desc: null,
     serving: 1,
     fact: {
       energy: 450,
@@ -366,7 +366,7 @@ module.exports = [
   {
     id: 'bell-pepper-egg-rings',
     name: 'Bell Pepper Egg Rings',
-    desc: '',
+    desc: null,
     serving: 1,
     fact: {
       energy: 180,
@@ -398,7 +398,7 @@ module.exports = [
   {
     id: 'banana-almond-oatmeal',
     name: 'Banana Almond Oatmeal',
-    desc: '',
+    desc: null,
     serving: 1,
     fact: {
       energy: 444,
@@ -435,7 +435,7 @@ module.exports = [
   {
     id: 'spinach-and-feta-baked-egg-cups',
     name: 'Spinach And Feta Baked Egg Cups',
-    desc: '',
+    desc: null,
     serving: 2,
     fact: {
       energy: 403,
@@ -477,7 +477,7 @@ module.exports = [
   {
     id: 'one-pan-honey-garlic-salmon-asparagus',
     name: 'One-Pan Honey Garlic Salmon & Asparagus',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 196,
@@ -514,7 +514,7 @@ module.exports = [
   {
     id: 'one-pan-roasted-veggie-salad-bowl',
     name: 'One-pan Roasted Veggie Salad Bowl',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 144,
@@ -566,7 +566,7 @@ module.exports = [
   {
     id: 'one-pan-flank-steak-veggies',
     name: 'One-pan Flank Steak & Veggies',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 820,
@@ -628,7 +628,7 @@ module.exports = [
   {
     id: 'weekday-meal-prep-pesto-chicken-veggies',
     name: 'Weekday Meal-prep Pesto Chicken & Veggies',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 350,
@@ -670,7 +670,7 @@ module.exports = [
   {
     id: 'egg-white-breakfast-cups',
     name: 'Egg White Breakfast Cups',
-    desc: '',
+    desc: null,
     serving: 6,
     fact: {
       energy: 136,
@@ -707,7 +707,7 @@ module.exports = [
   {
     id: 'classic-omelette',
     name: 'Classic Omelette',
-    desc: '',
+    desc: null,
     serving: 1,
     fact: {
       energy: 399,
@@ -740,7 +740,7 @@ module.exports = [
   {
     id: 'low-carb-egg-white-omelette',
     name: 'Low-Carb Egg White Omelette',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 470,
@@ -827,7 +827,7 @@ module.exports = [
   {
     id: 'avocado-egg-cups',
     name: 'Avocado Egg Cups',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 215,
@@ -860,7 +860,7 @@ module.exports = [
   {
     id: 'shrimp-and-asparagus-stir-fry',
     name: 'Shrimp And Asparagus Stir Fry',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 270,
@@ -922,7 +922,7 @@ module.exports = [
   {
     id: 'lobster-mac-cheese',
     name: 'Lobster Mac & Cheese',
-    desc: '',
+    desc: null,
     serving: 6,
     fact: {
       energy: 722,
@@ -989,7 +989,7 @@ module.exports = [
   {
     id: 'lobster-roll',
     name: 'Lobster Roll',
-    desc: '',
+    desc: null,
     serving: 4,
     fact: {
       energy: 350,
@@ -1036,7 +1036,7 @@ module.exports = [
   {
     id: 'wolfgang-puck-sea-bass-in-puff-pastry',
     name: 'Wolfgang Puck Sea Bass In Puff Pastry',
-    desc: '',
+    desc: null,
     serving: 6,
     fact: {
       energy: 787,
