@@ -67,7 +67,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
               {!_.isEmpty(fetchedAllergies) ? (
                 <Box py={2}>
                   <WarningCard p={3}>
-                    <Text fontSize={16} fontWeight={700}>ALLERGY ALERT!</Text>
+                    <Text fontSize={16} fontWeight={700} pb={1}>ALLERGY ALERT!</Text>
                     <Text fontSize={14}>This food contains following ingredent: <b>{fetchedAllergies.map(allergy => allergy.name).join(', ')}</b></Text>
                   </WarningCard>
                 </Box>
