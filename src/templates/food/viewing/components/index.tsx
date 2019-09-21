@@ -34,7 +34,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
   }, [])
 
   return (
-    <Flex justifyContent={`center`} py={3}>
+    <Flex justifyContent={`center`} py={4}>
       <Box width={[20/24, 16/24, 12/24, 8/24]}>
         <CoverCard>
           <Box my={[-120, -100, -80, 0]}>

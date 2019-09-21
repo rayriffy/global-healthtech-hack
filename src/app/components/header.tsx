@@ -13,7 +13,7 @@ const HeaderComponent = () => {
     <Box>
       <Flex alignItems={`center`}>
         <Flex alignItems={`flex-end`} flexWrap={`wrap`}>
-          <Text fontSize={42} fontWeight={700}>HackTech</Text>
+          <Text fontSize={42} fontWeight={700}>DietCare</Text>
           <Text fontSize={30} fontWeight={600} color={`rgba(0, 0, 0, 0.45)`} px={2} pb={2}>{subtitle}</Text>
         </Flex>
         <Box mx={`auto`} />
