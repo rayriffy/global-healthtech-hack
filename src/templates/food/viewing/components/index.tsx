@@ -8,6 +8,8 @@ import Img from 'gatsby-image'
 import { Box, Card, Flex, Text } from 'rebass'
 import styled from 'styled-components'
 
+import databaseAllergies from '../../../../contents/database/allergies'
+
 import { Subtitle } from '../../../../app/context'
 
 import List from './list'
@@ -31,6 +33,13 @@ const DottedCard = styled(Card)`
   border: 1px dashed #e8e8e8;
 `
 
+const WarningCard = styled(Card)`
+  background: #ffffff;
+  border-radius: 8px;
+  border 1px solid #facc14;
+  border-width: 1px 10px;
+`
+
 const FoodViewingComponent: React.FC<IProps> = props => {
   const {data} = props.pageContext
 
@@ -39,13 +48,10 @@ const FoodViewingComponent: React.FC<IProps> = props => {
   // 0 - Default, 1 - Cook, 2 - Shop
   const [eatOption, setEatOption] = useState<number>(0)
 
-  const [fact, setFact] = useState({
-    energy: 0,
-    sodium: 0,
-  })
+  const fetchedAllergies = _.filter(databaseAllergies, allergy => data.raw.allergies.includes(allergy.id))
 
   useEffect(() => {
-    setSubtitle('reading')
+    setSubtitle('recipe')
   }, [])
 
   return (
@@ -58,6 +64,14 @@ const FoodViewingComponent: React.FC<IProps> = props => {
           <Box mt={[120, 100, 80, 0]} p={3}>
             <Box px={2}>
               <Text fontSize={26} fontWeight={600} pt={2} pb={1}>{data.raw.name}</Text>
+              {!_.isEmpty(fetchedAllergies) ? (
+                <Box py={2}>
+                  <WarningCard p={3}>
+                    <Text fontSize={16} fontWeight={700}>ALLERGY ALERT!</Text>
+                    <Text fontSize={14}>This food contains following ingredent: <b>{fetchedAllergies.map(allergy => allergy.name).join(', ')}</b></Text>
+                  </WarningCard>
+                </Box>
+              ) : null}
               {!_.isEmpty(data.raw.desc) ? (
                 <Box py={2}>
                   <Text fontSize={14}>{data.raw.desc}</Text>
