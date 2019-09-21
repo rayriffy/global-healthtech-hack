@@ -17,6 +17,7 @@
     "@types/rebass": "^4.0.0",
     "@types/styled-components": "^4.1.19",
     "@types/typography": "^0.16.3",
+    "animated-number-react": "^0.0.2",
     "axios": "^0.19.0",
     "cwait": "^1.1.2",
     "dayjs": "^1.8.16",

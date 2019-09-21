@@ -14,5 +14,6 @@ export interface IDatabaseFood {
     fat: number
   }
   ingredents: IIngredent[]
+  preparation: string[]
   allergies: string[]
 }

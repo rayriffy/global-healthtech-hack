@@ -13,7 +13,7 @@ import { IFetchedFood } from '../@types/IFetchedFood'
 import { IUser } from '../@types/IUser'
 
 const normEnergy = 667, normCarb = 75, normFat = 20, normNa = 1000
-var recommendEnergy = normEnergy, recommendCarb = normCarb, recommendFat = normFat, recommendNa = normNa
+let recommendEnergy = normEnergy, recommendCarb = normCarb, recommendFat = normFat, recommendNa = normNa
 
 export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedFood[] => {
   if (user === null) {
@@ -69,6 +69,10 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
     if(Diabetes){
       recommendCarb = recommendCarb - 20
     }
+
+    const inRangeFood = _.filter(filteredFood, food => food.raw.fact.energy <= recommendEnergy + 175 && food.raw.fact.energy >= recommendEnergy - 175)
+
+    const outRangeFood = _.xor(filteredFood, inRangeFood)
     
     switch(true){
       case Diabetes && (HighBP.check || HighHR.check):

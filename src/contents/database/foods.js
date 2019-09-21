@@ -68,6 +68,18 @@ module.exports = [
         unit: null,
       },
     ],
+    preparation: [
+      'Preheat the oven to 375˚F (190˚C).',
+      'In a small bowl, combine 1 tablespoon of the Zesty spice blend, 1 teaspoon salt, and the pepper. Coat each piece of chicken evenly with seasoning blend. Set aside.',
+      'In a 6-quart Dutch oven, heat the vegetable oil over medium-high heat. Working in batches, sear the chicken for 2-3 minutes on each side, until a golden brown crust forms. Transfer the chicken to a plate and set aside.',
+      'Reduce the heat to medium. Add the butter, onion and garlic. Cook for 2 minutes, until the onion is translucent and fragrant.',
+      'Add the rice and remaining tablespoon of Zesty spice blend, bell pepper and stir to coat with the butter and aromatics. Pour in the stock and stir to deglaze the pot. Add the remaining 2 teaspoons of salt. Bring to a low boil and cook for about 2 minutes.',
+      'Arrange the chicken pieces on top of the rice. They may sink into the stock slightly, but that is okay.',
+      'Cover the Dutch oven and transfer to the oven. Bake for 35 minutes, until the rice is cooked through, but not mushy, and the chicken temperature reaches 165˚F (75˚C).',
+      'Remove the chicken from the pot. Squeeze the juice from a lemon half into the rice and fluff with a fork, allowing some steam to escape and halt additional cooking.',
+      'Transfer the rice and chicken to plates and top with fresh basil. Cut the remaining lemon half into wedges and serve on the side.',
+      'Enjoy!'
+    ],
     allergies: ['gluten']
   },
   {
@@ -150,6 +162,18 @@ module.exports = [
         unit: 'tbsp',
       },
     ],
+    preparation: [
+      'Preheat the oven to 400˚F (200˚C).',
+      'Make the tofu marinade: In a medium bowl, mix together the sesame oil, mirin, Fiery spice blend, and salt.',
+      'Cut the tofu lengthwise into ½-inch (1 ¼ cm) wide slabs, then cut each slab in half lengthwise. Cut each strip into ½-inch (1 ¼ cm) wide cubes. Toss with the marinade, then cover with plastic wrap marinate in the fridge for at least 1 hour.',
+      'Fill a large pot with cold water, season well with salt, and add the sweet potatoes. Bring to a boil over medium-high heat. Reduce the heat to low and simmer until the sweet potatoes can be pierced with a fork but still give some resistance, about 20 minutes.',
+      'Remove sweet potatoes from the pot and set aside to cool. Drop in the broccoli florets and blanch for 90 seconds. Remove the broccoli and shock in an ice bath to stop the cooking. Cool completely, about 60 seconds, then transfer to a paper towel-lined plate to drain.',
+      'Cut the cooled sweet potato into ½-inch (1 ¼ cm) wide half moons and season with salt to taste.',
+      'On a lightly greased baking sheet, spread out the marinated tofu and sweet potato. Bake for 20 minutes, until sweet potatoes and tofu begin to brown.',
+      'While the sweet potatoes and tofu cook, make the peanut sauce: In a medium bowl, whisk together the peanut butter, apple cider vinegar, Fiery spice blend, and ¼ cup water. Add more water as necessary to achieve a pourable, but not runny, consistency. Season with salt to taste.',
+      'Assemble the bowls: Add 1 cup (170 G) of quinoa to the bottom of a serving bowl, then arrange about 2½ ounces (70 G) of tofu, ½ cup (112 G) sweet potato, ½ cup (75 G) broccoli florets, ½ cup (50 G) purple cabbage, ¼ cup (30 G) cucumber, and 4-5 slices of avocado on top. Drizzle with 2-3 tablespoons peanut sauce and top with crushed peanuts, cilantro, and mint.',
+      'Enjoy!'
+    ],
     allergies: ['nut-protein'] 
   },
   {
@@ -217,6 +241,14 @@ module.exports = [
           unit: 'tsp',
         },    
       ],
+      preparation: [
+        'Preheat oven to 375˚F (190˚C).',
+        'Add the sweet potatoes, lemon slices, green beans, olive oil, rosemary, thyme, garlic, salt, and pepper to a large bowl (or parchment paper-lined sheet tray) and toss until fully coated.',
+        'Season the chicken breast with salt, pepper, and paprika.',
+        'Transfer to a parchment paper-lined sheet tray and place the chicken breast on top of the vegetables (if you tossed your vegetables in a bowl).',
+        'Bake until vegetables are tender and chicken is cooked through, about 20 minutes.',
+        'Enjoy!'
+      ],
       allergies: []
   },
   {
@@ -283,6 +315,17 @@ module.exports = [
         amount: 1,
         unit: 'tbps',
       },
+    ],
+    preparation: [
+      'Preheat oven to 375°F (190˚C).',
+      'Combine flour with ½ teaspoon salt and ½ teaspoon pepper in a wide bowl. Crack egg into another bowl, whisk it, and place breadcrumbs into a third bowl.',
+      'Coat chicken in flour, then egg, then breadcrumbs.',
+      'Heat 1½ teaspoons olive oil in a skillet over medium heat. Cook chicken breast until crispy and golden, about 3 minutes on each side. Remove chicken from pan and set aside.',
+      'Add remaining olive oil, garlic, red pepper flakes, and eggplant to pan and cook until tender, about 3 minutes.',
+      'Add remaining salt, pepper, and crushed tomatoes. Remove pan from heat, top with chicken breast, and place mozzarella on top.',
+      'Bake until cheese is melted, about 12 minutes.',
+      'Garnish with chopped basil.',
+      'Enjoy!'
     ],
     allergies: ['lactose']
   },
@@ -361,6 +404,15 @@ module.exports = [
         unit: null,
       },
     ],
+    preparation: [
+      'Preheat oven to 450˚F (230˚C).',
+      'Place the rice in a sieve and rinse under cold water to remove excess starch.',
+      'Transfer the rice to a small pot with salt and water and bring to a boil over high heat. Reduce to a simmer, put a lid on, and cook until water is absorbed, about 45 minutes.',
+      'In a bowl, add the skirt steak, red onion, bell pepper, lime juice, onion powder, chili powder, black pepper, and remaining salt and toss until well combined.',
+      'Transfer to a parchment paper-lined sheet tray and bake for 12 to 15 minutes.',
+      'Serve steak over rice and top with cilantro and lime wedges.',
+      'Enjoy!'
+    ],
     allergies: ['gluten']
   },
   {
@@ -392,6 +444,14 @@ module.exports = [
         amount: null,
         unit: null,
       },
+    ],
+    preparation: [
+      'Slice a yellow bell pepper on its side to create rings.',
+      'Place the 2 rings in a pan and let simmer for a few seconds.',
+      'Crack one egg inside each of the rings.',
+      'Cover the pan and cook 4-5 minutes. (or to desired wellness)',
+      'Serve the bell pepper egg rings with toast and fruit. (optional) Top with salt and pepper to taste.',
+      'Enjoy!'
     ],
     allergies: []
   },
@@ -429,6 +489,13 @@ module.exports = [
         amount: null,
         unit: null,
       },
+    ],
+    preparation: [
+      'Pour instant out into mason jar or bowl. Add salt to taste (optional).',
+      'Add cinnamon. Pour hot water and stir the oatmeal occasionally.',
+      'Let stand for 1 minute.',
+      'Add sliced banana and almonds to taste.',
+      'Enjoy!'
     ],
     allergies: ['gluten']
   },
@@ -472,6 +539,14 @@ module.exports = [
         unit: 'tsp',
       },
     ],
+    preparation: [
+      'Preheat oven to 350˚F (180˚C).',
+      'Spray a six-cup muffin tray with nonstick spray.',
+      'In a bowl, add the eggs, spinach, feta, tomato, salt, and pepper, and stir to distribute ingredients.',
+      'Distribute the mixture evenly between the muffins cups.',
+      'Bake until the eggs are set, about 15 minutes.',
+      'Enjoy!'
+    ],
     allergies: ['lactose']
   },
   {
@@ -508,6 +583,15 @@ module.exports = [
         amount: null,
         unit: null,
       },
+    ],
+    preparation: [
+      'Preheat oven to 400°F (200°C).',
+      'Add the asparagus onto a baking tray and coat with olive oil, salt, pepper, and garlic.',
+      'Place salmon fillets in the middle of the baking tray.',
+      'In a small bowl, add the olive oil, honey, and garlic. Mix until well combined. Coat salmon with mixture.',
+      'Bake for 12-15 minutes.',
+      'Serve now or refrigerate in airtight container up to 3-4 days.',
+      'Enjoy!'
     ],
     allergies: []
   },
@@ -560,6 +644,14 @@ module.exports = [
         amount: null,
         unit: null,
       },
+    ],
+    preparation:[
+      'Preheat oven to 400°F (200°C).',
+      'Add sweet potatoes, cauliflower, and Brussels sprouts to a baking tray.',
+      'Sprinkle with olive oil, salt, pepper, and garlic powder. Mix until well coated.',
+      'Bake for 25-30 minutes.',
+      'Serve with mixed greens now or refrigerate in airtight container up to 3-5 days.',
+      'Enjoy!'
     ],
     allergies: []
   },
@@ -623,6 +715,18 @@ module.exports = [
         unit: 'cup',
       },
     ],
+    preparation: [
+      'Preheat oven to 400°F (200°C).',
+      'In a small bowl, add the salt, pepper, garlic powder, paprika, and onion powder. Stir until well combined.',
+      'Place broccoli, onions, and flank steak on a baking tray.',
+      'Coat broccoli and onions with olive oil.',
+      'Sprinkle seasoning mix on flank steak, broccoli, and onions until coated.',
+      'Bake for 15 minutes.',
+      'Broil for 2 minutes.',
+      'For medium, internal temperature of steak should reach 145°F (65°C). Let steak rest 10 minutes before cutting.',
+      'Serve now with wild rice or refrigerate in airtight containers up to 3-4 days',
+      'Enjoy!'
+    ],
     allergies: ['gluten']
   },
   {
@@ -665,6 +769,15 @@ module.exports = [
         unit: 'cup'
       },
     ],
+    preparation: [
+      'In a large pan, heat olive oil and add chicken thighs.',
+      'Season with salt and pepper. When the chicken is completely cooked through, remove from pan.',
+      'Slice into strips, and set aside.',
+      'Add green beans and cook until crisp tender.',
+      'Return the chicken strips to the pan, then add tomatoes and pesto. Stir until fully incorporated.',
+      'Serve immediately or divide into 4 food storage containers and store in the refrigerator. Can be kept refrigerated for up to 4 days.',
+      'Enjoy!'
+    ],
     allergies: []
   },
   {
@@ -702,6 +815,16 @@ module.exports = [
         unit: 'cup'
       },
     ],
+    preparation: [
+      'Preheat the oven to 350˚F (180˚C).',
+      'Lightly grease a muffin tin.',
+      'Then divide equally the spinach across 6 cups.',
+      'Dice the tomato, then fill the cups with the tomato and egg whites.',
+      'Season with salt and pepper.',
+      'Bake for 15 minutes, or until the whites have set.',
+      'Serve hot.',
+      'Enjoy!'
+    ],
     allergies: []
   },
   {
@@ -729,11 +852,18 @@ module.exports = [
         unit: 'tbsp',
       },
       {
-        name: 'Spanich, tomato,mushroom,cheese',
+        name: 'Spanich, Tomato, Mushroom, Cheese',
         amount: null,
         unit: null,
-      },
-    
+      },    
+    ],
+    preparation: [
+      'In a medium bowl, beat the eggs.',
+      'Melt the butter in a medium frying pan over medium heat.',
+      'Pour in the beaten eggs. Stir and shake the pan, moving the eggs around until a few curds form. Reduce the heat to low, then flatten the eggs until the still-runny egg covers the entire bottom of the pan. Add any fillings that you would like.',
+      'Let the omelette cook until the eggs are fully set, 1-2 minutes, then gently roll the omelette and transfer to a plate. The surface should be smooth with no color.',
+      'Sprinkle with chives, if desired.',
+      'Enjoy!'
     ],
     allergies: ['lactose']
   },
@@ -822,6 +952,18 @@ module.exports = [
         unit: 'tbsp',
       },
     ],
+    preparation: [
+      'Place the lime juice, water, avocado, Greek yogurt, salt, and pepper in a blender and blend until smooth. Set aside.',
+      'Add oil to a pan over medium heat.',
+      'Add onions and peppers and cook until nearly soft, about 5 minutes.',
+      'Add spinach and cheese and stir for another 2 to 3 minutes. Set aside.',
+      'Add oil to a pan over medium heat.',
+      'Add the egg whites to the pan and season with salt and pepper. Cook until set, about 2 minutes.',
+      'Flip the eggs and let set for about 1 minute.',
+      'Fill the egg whites with the pepper, onion, spinach, and cheese mixture. Roll up the egg white omelette.',
+      'Top with avocado dressing, tomato, and cilantro.',
+      'Enjoy!'
+    ],
     allergies: ['lactose']
   },
   {
@@ -854,6 +996,15 @@ module.exports = [
         unit: null,
       },
     
+    ],
+    preparation: [
+      'Preheat the oven to 425°F (220°C).',
+      'Cut the avocados in half and carefully remove the pits.',
+      'Scoop out 1-2 tablespoons of avocado from the center of each half (save it for another meal!).',
+      'Transfer the avocado halves to a baking sheet and carefully crack an egg into each avocado cup. If the divot is too small, it may be easier to separate the egg yolks and whites before placing them in the avocado.',
+      'Add your favorite topping combo, such as tomato and basil, feta cheese, bell pepper and onion, and bacon and chives. Season with salt and pepper to taste',
+      'Bake for 18 minutes, or until the egg whites have cooked completely.',
+      'Enjoy!'
     ],
     allergies: []
   },
@@ -916,6 +1067,14 @@ module.exports = [
         amount: 2,
         unit: 'tbsp',
       },
+    ],
+    preparation: [
+      'In a large frying pan, heat 2 tablespoons olive oil over medium-high heat.',
+      'Add shrimp to the pan, then season with ½ teaspoon of salt and ½ teaspoon crushed red pepper. Cook until the shrimp is pink. Remove the shrimp from the pan and set aside.',
+      'In the same pan, heat 2 tablespoons olive oil and add asparagus.',
+      'Add ginger and garlic, then season with ½ teaspoon of salt. Stir frequently and cook until the asparagus is tender-crisp.',
+      'Return the shrimp to the pan, then add soy sauce. Stir until the ingredients are well combined. Just before the dish is ready, add lemon juice, stir once more, then serve while hot.',
+      'Enjoy!'
     ],
     allergies: ['chitin']
   },
@@ -984,6 +1143,29 @@ module.exports = [
         unit: 'tbsp',
       },
     ],
+    preparation: [
+      'Preheat the oven to 425°F (220°C).',
+      'Boil the lobster tails in salted water until just cooked through, about 12 minutes. -- Cook 1 minute per ounce (28g).',
+      'When cool, remove the meat and dice. Set aside.',
+      'Toss the breadcrumbs with 1 tablespoon melted butter, 2 tablespoons parmesan cheese, and black pepper.',
+      'Cook the pasta in salted boiling water until al dente, about 7 minutes.',
+      'Drain and set aside.',
+      'In a large sauce pan, melt the butter over medium-low heat.',
+      'Add the flour and whisk, cook about a minute.',
+      'Add the Cognac and whisk. The mixture will thicken immediately.',
+      'Slowly add the milk, while whisking.',
+      'Increase the heat to medium and stir occasionally until it starts to bubble.',
+      'The sauce will thicken enough to coat the back of a spoon.',
+      'When it reaches this stage, add salt and pepper to taste.',
+      'Add the sharp cheddar, Comte and parmesan cheeses, one handful at a time, whisking to incorporate. When one handful is melted, add the next.',
+      'When all the shredded cheese has been added, add the mascarpone and stir.',
+      'Remove from heat.',
+      'Toss the cooked pasta with the sauce and ½ of the lobster, reserving about ½ for the top.',
+      'Pour into a bake dish, and top with reserved lobster and buttered breadcrumbs.',
+      'Bake until golden brown and bubbly, about 10 minutes.',
+      'Serve immediately.',
+      'Enjoy!'      
+    ],
     allergies: ['chitin','lactose','gluten']
   },
   {
@@ -1030,6 +1212,14 @@ module.exports = [
         amount: 4,
         unit: null,
       },
+    ],
+    preparation: [
+      'In a large bowl, combine the celery, ⅓ cup (80 g) of the mayonnaise, lemon zest, lemon juice, and chives.',
+      'Season with salt and pepper.',
+      'Stir in the lobster meat just to combine.',
+      'Brush the inside of the hotdog buns with the remaining 2 tablespoons mayonnaise.',
+      'Toast in a large skillet set over medium heat.',
+      'Enjoy!'
     ],
     allergies: ['chithin','gluten']
   },
@@ -1112,6 +1302,26 @@ module.exports = [
         amount: 18,
         unit: 'tsp',
       },
+    ],
+    preparation: [
+      'Heat the olive oil in a medium pan over medium heat.',
+      'Add the celery, leeks, carrots, and a pinch of salt and white pepper, and sauté until the vegetables start to cook down.',
+      'Add the cream and stir to coat the vegetables. Cook until the cream is thickened.',
+      'Remove the pan from the heat.',
+      'Line a baking sheet with parchment paper. Roll out both sheets of puff pastry until they are ⅓-inch thick. Transfer one sheet of puff pastry to the baking sheet.',
+      'Cut the sea bass along the back to remove the spine, then butterfly open. Season with salt, pepper, and the tarragon.',
+      'Scoop the cooked vegetables onto one side of the fish, then fold over the other fillet.',
+      'Transfer the fish to the center of the sheet of puff pastry.',
+      'Brush egg wash around the fish, then lay on the second sheet of puff pastry, pressing around the fish to seal. Use a paring knife to cut away the excess puff pastry in the shape of a fish.',
+      'Brush the top of the puff pastry with egg wash and use the leftover pastry scraps to decorate the fish with an eye and gills. Use the tip of the knife or the large opening of a pastry tip to draw scales on the body and tail.',
+      'Chill in the refrigerator for at least 30 minutes.',
+      'Make the Chive Butter Sauce: In a medium saucepan over medium heat, combine the wine, lemon juice, shallots, and tarragon. Reduce until only a ¼ cup (60 ml) of liquid remains. Add the cream and reduce until the mixture thickens slightly.',
+      'Slowly whisk in the butter, 1 piece at a time, until the sauce is glossy and thickened.',
+      'Remove the tarragon stem and season with salt and pepper. Stir in the chives.',
+      'Preheat the oven to 375℉ (190℃). When the oven is heated. Bake the fish for 15 to 20 minutes, or until the pastry is golden brown.',
+      'Transfer the fish to a platter and garnish with fresh parsley and lemon wedges.',
+      'To serve, cut the fish into individual portions and plate with a drizzle of Chive Butter Sauce.',
+      'Enjoy!'
     ],
     allergies: ['chithin','lactose','gluten']
   },
