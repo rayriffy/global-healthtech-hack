@@ -47,7 +47,10 @@ const FoodListingComponent: React.FC<IProps> = props => {
   useEffect(() => {
     setSubtitle('listing')
 
-    setFoods(getFoodSuggestion(userData, data))
+    const filteredFoods = getFoodSuggestion(userData, data)
+
+    console.log(filteredFoods)
+    setFoods(filteredFoods)
   }, [])
 
   return (
