@@ -1,10 +1,9 @@
 import { IIngredent } from './IIngredent'
-import { IVitamin } from './IVitamin'
 
 export interface IDatabaseFood {
   id: string
   name: string
-  desc: string
+  desc: string | null
   serving: number
   fact: {
     energy: number
@@ -14,7 +13,6 @@ export interface IDatabaseFood {
     carbohydrate: number
     fat: number
   }
-  vitamins: IVitamin[]
   ingredents: IIngredent[]
   allergies: string[]
 }

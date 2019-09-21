@@ -27,7 +27,7 @@ const PosterCard = styled(Card)`
   position: relative;
   border-radius: 6px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
 `
 
@@ -36,16 +36,16 @@ const FoodListingComponent: React.FC<IProps> = props => {
 
   return (
     <Flex justifyContent={`center`}>
-      <Box width={[20/24, 16/24, 12/24, 8/24]}>
+      <Box width={[21/24, 16/24, 12/24, 8/24]}>
         <Flex flexWrap={`wrap`}>
           {data.map(node => {
             return (
-              <Box width={1 / 2} p={2}>
+              <Box width={1 / 2} p={[1, 2]} key={`card-food-${node.raw.id}`}>
                 <TransparentLink to={`/food/${node.raw.id}`}>
                 <PosterCard>
                   <GatsbyImage fluid={node.image.childImageSharp.fluid} />
                   <Box p={3} style={{ position: 'absolute', left: '0', bottom: '0' }}>
-                    <Text fontSize={[22, 24, 26, 28]} fontWeight={600} color={`white`}>{node.raw.name}</Text>
+                    <Text fontSize={[20, 22, 24, 26]} fontWeight={600} color={`white`}>{node.raw.name}</Text>
                     <Flex alignItems={`center`}>
                       <FaFire color={`white`} size={`16px`} />
                       <Text fontSize={[14, 16, 18, 20]} color={`white`} px={1}>{node.raw.fact.energy}</Text>
