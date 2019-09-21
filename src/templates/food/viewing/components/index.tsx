@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React, { useContext, useEffect, useState } from 'react'
 
 import AnimatedNumber from 'animated-number-react'
+import { FaPhone } from 'react-icons/fa'
 
 import Img from 'gatsby-image'
 
@@ -13,6 +14,7 @@ import databaseAllergies from '../../../../contents/database/allergies'
 import { Subtitle } from '../../../../app/context'
 
 import List from './list'
+import Map from '../../../../core/components/map'
 
 import { IProps } from '../@types/IProps'
 
@@ -26,10 +28,11 @@ const CoverCard = styled(Card)`
 const BorderedCard = styled(Card)`
   border-radius: 8px;
   border: 1px solid #e8e8e8;
+  overflow: hidden;
 `
 
 const DottedCard = styled(Card)`
-  border-radius: 20px;
+  border-radius: 8px;
   border: 1px dashed #e8e8e8;
 `
 
@@ -122,7 +125,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                   <BorderedCard p={3}>
                     {_.sortBy(data.raw.ingredents, o => _.capitalize(o.name)).map(ingredent => {
                       return (
-                        <List name={_.capitalize(ingredent.name)} desc={ingredent.amount !== null ? `${_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)}${ingredent.unit !== null ? ` ${ingredent.unit}` : ''}` : null} />
+                        <List key={`list-ingredent-${ingredent.name}`} name={_.capitalize(ingredent.name)} desc={ingredent.amount !== null ? `${_.last(Number(ingredent.amount).toFixed(2).split('.')) === '00' ? ingredent.amount : Number(ingredent.amount).toFixed(2)}${ingredent.unit !== null ? ` ${ingredent.unit}` : ''}` : null} />
                       )
                     })}
                   </BorderedCard>
@@ -136,7 +139,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                       <Text fontSize={14} color={`#5c6b77`}>Cook by yourself</Text>
                     </DottedCard>
                   </Box>
-                  <Box px={2} width={[1, 1, `auto`, `auto`]}>
+                  <Box px={2} py={2} width={[1, 1, `auto`, `auto`]}>
                     <Text fontSize={12} textAlign={`center`}>OR</Text>
                   </Box>
                   <Box onClick={() => setEatOption(2)}>
@@ -153,7 +156,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
                     <BorderedCard p={3}>
                       {data.raw.preparation.map((step, i) => {
                         return (
-                          <Flex flexWrap={`wrap`} py={1}>
+                          <Flex key={`preparation-step-${i}`} flexWrap={`wrap`} py={1}>
                             <Box width={1 / 10}><Text fontSize={14} fontWeight={600}>{i + 1}</Text></Box>
                             <Box width={9 / 10}><Text fontSize={14}>{step}</Text></Box>
                           </Flex>
@@ -165,7 +168,24 @@ const FoodViewingComponent: React.FC<IProps> = props => {
               ) : eatOption === 2 ? (
                 <Box>
                   <Text fontSize={18} fontWeight={700}>FIND STORE</Text>
-                  <Box p={3}></Box>
+                  <Text fontSize={16} color={`rgba(0, 0, 0, 0.65)`} pb={1}>Found 1 store</Text>
+                  <Box p={3}>
+                    <BorderedCard>
+                      <Box height={`150px`}>
+                        <Map lat={13.7928619} lon={100.3248977} />
+                      </Box>
+                      <Box p={3}>
+                        <Text fontSize={16} fontWeight={600}>Brew & Brev</Text>
+                        <Text fontSize={14} py={2}>999 Mahidol University, Salaya, Phutthamonthon, Nakhon Pathom, Thailand 73170</Text>
+                        <Flex alignItems={`center`}>
+                          <Box>
+                            <FaPhone />
+                          </Box>
+                          <Text px={2} fontSize={14}>02-441-0298</Text>
+                        </Flex>
+                      </Box>
+                    </BorderedCard>
+                  </Box>
                 </Box>
               ) : null}
               </Box>

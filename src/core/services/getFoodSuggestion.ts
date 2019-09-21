@@ -12,7 +12,7 @@ import { getAge } from './getAge'
 import { IFetchedFood } from '../@types/IFetchedFood'
 import { IUser } from '../@types/IUser'
 
-const normEnergy = 667, normCarb = 75, normFat = 20, normNa = 1000
+const normEnergy = 667, normCarb = 75, normFat = 20, normNa = 585
 let recommendEnergy = normEnergy, recommendCarb = normCarb, recommendFat = normFat, recommendNa = normNa
 
 export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedFood[] => {
@@ -70,37 +70,54 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
       recommendCarb = recommendCarb - 20
     }
 
-    const inRangeFood = _.filter(filteredFood, food => food.raw.fact.energy <= recommendEnergy + 175 && food.raw.fact.energy >= recommendEnergy - 175)
+    const inRangeFoodEnergy = _.filter(filteredFood, food => food.raw.fact.energy <= recommendEnergy + 175 && food.raw.fact.energy >= recommendEnergy - 175)
+    const inRangeFoodCarb = _.filter(filteredFood, food => food.raw.nutrients.carbohydrate <= recommendCarb + 25 && food.raw.nutrients.carbohydrate >= recommendCarb - 25)
+    const inRangeFoodFat = _.filter(filteredFood, food => food.raw.nutrients.fat <= recommendFat + 6 && food.raw.nutrients.fat >= recommendFat - 6)
+    const inRangeFoodNa = _.filter(filteredFood, food => food.raw.fact.sodium <= recommendNa + 250 && food.raw.fact.sodium >= recommendNa - 250)
+    const inRangeforDiabetes = _.filter(inRangeFoodCarb, food => food.raw.fact.sodium <= recommendNa + 250 && food.raw.fact.sodium >= recommendNa - 250) 
 
-    const outRangeFood = _.xor(filteredFood, inRangeFood)
-    
+    const outRangeFoodEnergy = _.xor(filteredFood, inRangeFoodEnergy)
+    const outRangeFoodCarb = _.xor(filteredFood, inRangeFoodCarb)
+    const outRangeFoodFat = _.xor(filteredFood, inRangeFoodFat)
+    const outRangeFoodNa = _.xor(filteredFood, inRangeFoodNa)
+    const outRangeforDiabetes = _.xor(filteredFood, inRangeforDiabetes)
+
     switch(true){
       case Diabetes && (HighBP.check || HighHR.check):
-          return _.sortBy(filteredFood, [
+          return _.concat((_.sortBy(inRangeforDiabetes, [
+            o => Math.abs((recommendCarb - o.raw.nutrients.carbohydrate) + (recommendNa - o.raw.fact.sodium)),
             o => Math.abs(recommendCarb - o.raw.nutrients.carbohydrate),
             o => Math.abs(recommendNa - o.raw.fact.sodium),
             o => Math.abs(recommendFat - o.raw.nutrients.fat),
-            o => Math.abs(recommendEnergy - o.raw.fact.energy)
-          ])
+            o => Math.abs(recommendEnergy - o.raw.fact.energy),
+          ])),(
+            _.sortBy(outRangeforDiabetes, [o => (o.raw.nutrients.carbohydrate)])
+          ))
       case Diabetes:
-        return _.sortBy(filteredFood, [
+        return _.concat((_.sortBy(inRangeFoodCarb, [
           o => Math.abs(recommendCarb - o.raw.nutrients.carbohydrate),
           o => Math.abs(recommendEnergy - o.raw.fact.energy), 
           o => Math.abs(recommendFat - o.raw.nutrients.fat)
-        ])
+        ])),(
+          _.sortBy(outRangeFoodCarb, [o => (o.raw.nutrients.carbohydrate)])
+        ))
       case HighBP.check || HighHR.check:
-        return _.sortBy(filteredFood, [
+        return _.concat((_.sortBy(inRangeFoodNa, [
           o => Math.abs(recommendNa - o.raw.fact.sodium),
           o => Math.abs(recommendFat - o.raw.nutrients.fat),
           o => Math.abs(recommendEnergy - o.raw.fact.energy)
-        ])
+        ])),(
+          _.sortBy(outRangeFoodNa, [o => (o.raw.nutrients.carbohydrate)])
+        ))
       default:
-        return _.sortBy(filteredFood, [
+        return _.concat((_.sortBy(inRangeFoodEnergy, [
           o => Math.abs(recommendEnergy - o.raw.fact.energy),
           o => Math.abs(recommendCarb - o.raw.nutrients.carbohydrate),
           o => Math.abs(recommendFat - o.raw.nutrients.fat),
           o => Math.abs(recommendNa - o.raw.fact.sodium)
-        ])
+        ])),(
+          _.sortBy(outRangeFoodEnergy, [o => (o.raw.nutrients.carbohydrate)])
+        ))
     }
   }
 }
