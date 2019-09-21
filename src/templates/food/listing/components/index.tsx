@@ -44,11 +44,11 @@ const FoodListingComponent: React.FC<IProps> = props => {
 
   return (
     <Flex justifyContent={`center`}>
-      <Box width={[21/24, 16/24, 12/24, 10/24]}>
+      <Box width={[22 / 24, 20 / 24, 20 / 24, 18 / 24]}>
         <Flex flexWrap={`wrap`}>
           {data.map(node => {
             return (
-              <Box width={1 / 2} p={[1, 2]} key={`card-food-${node.raw.id}`}>
+              <Box width={[1 / 2, 1 / 3, 1 / 4, 1 /5]} p={[1, 2]} key={`card-food-${node.raw.id}`}>
                 <TransparentLink to={`/food/${node.raw.id}`}>
                 <PosterCard>
                   <GatsbyImage fluid={node.image.childImageSharp.fluid} />
