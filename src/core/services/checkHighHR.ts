@@ -4,7 +4,7 @@ interface IReturn {
 }
 
 export const checkHighHR = (age: number, heartrate: number): IReturn => {
-    if (age >= 20 && age < 30) {
+    if (age < 30) {
       return {
         check: heartrate > 170,
         diff: heartrate - 170

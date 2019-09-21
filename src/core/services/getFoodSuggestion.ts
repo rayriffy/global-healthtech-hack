@@ -29,6 +29,8 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
     const HighHR = checkHighHR(getAge(user.birthday), heartrate)
     const LowHR = checkLowHR(getAge(user.birthday), heartrate)
     const Diabetes = user.diabetes
+
+    console.log(getAge(user.birthday))
   
     const Allergies = user.allergies
     
@@ -107,7 +109,7 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
           o => Math.abs(recommendFat - o.raw.nutrients.fat),
           o => Math.abs(recommendEnergy - o.raw.fact.energy)
         ])),(
-          _.sortBy(outRangeFoodNa, [o => (o.raw.nutrients.carbohydrate)])
+          _.sortBy(outRangeFoodNa, [o => (o.raw.fact.sodium)])
         ))
       default:
         return _.concat((_.sortBy(inRangeFoodEnergy, [
@@ -116,7 +118,7 @@ export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedF
           o => Math.abs(recommendFat - o.raw.nutrients.fat),
           o => Math.abs(recommendNa - o.raw.fact.sodium)
         ])),(
-          _.sortBy(outRangeFoodEnergy, [o => (o.raw.nutrients.carbohydrate)])
+          _.sortBy(outRangeFoodEnergy, [o => (o.raw.fact.energy)])
         ))
     }
   }

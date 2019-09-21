@@ -2,6 +2,8 @@ import React, { Dispatch, SetStateAction, useState } from 'react'
 
 import { IUser } from '../../core/@types/IUser'
 
+import { get } from 'local-storage'
+
 type ISubtitle = [string, Dispatch<SetStateAction<string>>] | []
 type IUserData = [IUser, Dispatch<SetStateAction<IUser>>] | []
 
@@ -15,7 +17,7 @@ const Context: React.FC = props => {
   const [subtitle, setSubtitle] = useState<string>('init')
 
   // User
-  const [user, setUser] = useState<IUser>(null)
+  const [user, setUser] = useState<IUser>(JSON.parse(get('user')))
 
   return (
     <Subtitle.Provider value={[subtitle, setSubtitle]}>

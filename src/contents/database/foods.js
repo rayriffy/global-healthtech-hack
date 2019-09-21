@@ -6,7 +6,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 1469,
-      sodium: 1000,
+      sodium: 500,
     },
     nutrients: {
       carbohydrate: 152,
@@ -83,13 +83,13 @@ module.exports = [
     allergies: ['gluten']
   },
   {
-  id: 'tofu-buddha-bowl',
+    id: 'tofu-buddha-bowl',
     name: 'Tofu Buddha Bowl',
     desc: null,
     serving: 6,
     fact: {
       energy: 957,
-      sodium: 1000,
+      sodium: 330,
     },
     nutrients: {
       carbohydrate: 144,
@@ -183,7 +183,7 @@ module.exports = [
       serving: 1,
       fact: {
         energy: 181,
-        sodium: 1000,
+        sodium: 800,
       },
       nutrients: {
         carbohydrate: 13,
@@ -258,7 +258,7 @@ module.exports = [
     serving: 1,
     fact: {
       energy: 409,
-      sodium: 1000,
+      sodium: 800,
     },
     nutrients: {
       carbohydrate: 62,
@@ -336,7 +336,7 @@ module.exports = [
     serving: 1,
     fact: {
       energy: 450,
-      sodium: 1000,
+      sodium: 1600,
     },
     nutrients: {
       carbohydrate: 49,
@@ -422,7 +422,7 @@ module.exports = [
     serving: 1,
     fact: {
       energy: 180,
-      sodium: 1000,
+      sodium: 150,
     },
     nutrients: {
       carbohydrate: 0,
@@ -462,7 +462,7 @@ module.exports = [
     serving: 1,
     fact: {
       energy: 444,
-      sodium: 1000,
+      sodium: 250,
     },
     nutrients: {
       carbohydrate: 54,
@@ -506,7 +506,7 @@ module.exports = [
     serving: 2,
     fact: {
       energy: 403,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 6,
@@ -556,7 +556,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 196,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 11,
@@ -602,7 +602,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 144,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 11,
@@ -662,7 +662,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 820,
-      sodium: 1000,
+      sodium: 600,
     },
     nutrients: {
       carbohydrate: 114,
@@ -736,7 +736,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 350,
-      sodium: 1000,
+      sodium: 200,
     },
     nutrients: {
       carbohydrate: 15,
@@ -787,7 +787,7 @@ module.exports = [
     serving: 6,
     fact: {
       energy: 136,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 0,
@@ -834,7 +834,7 @@ module.exports = [
     serving: 1,
     fact: {
       energy: 399,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 1,
@@ -874,7 +874,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 470,
-      sodium: 1000,
+      sodium: 500,
     },
     nutrients: {
       carbohydrate: 1,
@@ -973,7 +973,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 215,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 6,
@@ -1015,7 +1015,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 270,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 6,
@@ -1085,7 +1085,7 @@ module.exports = [
     serving: 6,
     fact: {
       energy: 722,
-      sodium: 1000,
+      sodium: 400,
     },
     nutrients: {
       carbohydrate: 58,
@@ -1175,7 +1175,7 @@ module.exports = [
     serving: 4,
     fact: {
       energy: 350,
-      sodium: 1000,
+      sodium: 600,
     },
     nutrients: {
       carbohydrate: 26,
@@ -1230,7 +1230,7 @@ module.exports = [
     serving: 6,
     fact: {
       energy: 787,
-      sodium: 1000,
+      sodium: 600,
     },
     nutrients: {
       carbohydrate: 22,
