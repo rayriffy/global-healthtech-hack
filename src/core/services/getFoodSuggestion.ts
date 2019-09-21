@@ -12,42 +12,33 @@ import { IFetchedFood } from '../@types/IFetchedFood'
 import { IUser } from '../@types/IUser'
 
 export const getFoodSuggestion = (user: IUser, foods: IFetchedFood[]): IFetchedFood[] => {
-  const BMI = getBMI(user.body.weight, user.body.height)
-  const HighFat = checkHighFat(user.gender, user.body.fat)
-  const HighBP = checkHighBP(user.body.bloodPressure.high, user.body.bloodPressure.low)
-  const LowBP = checkLowBP(user.body.bloodPressure.high, user.body.bloodPressure.low)
-  const HighHR = checkHighHR(getAge(user.birthday), user.body.heartrate)
-  const LowHR = checkLowHR(getAge(user.birthday), user.body.heartrate)
+  const {weight, height, heartrate, fat, bloodPressure} = user.body
+
+  const BMI = getBMI(weight, height)
+  const HighFat = checkHighFat(user.gender, fat)
+  const HighBP = checkHighBP(bloodPressure.high, bloodPressure.low)
+  const LowBP = checkLowBP(bloodPressure.high, bloodPressure.low)
+  const HighHR = checkHighHR(getAge(user.birthday), heartrate)
+  const LowHR = checkLowHR(getAge(user.birthday), heartrate)
   const Diabetes = user.diabetes
+
   const Allergies = user.allergies
   
   const filteredFood = _.filter(foods, food => _.isEmpty(_.intersection(food.raw.allergies, Allergies)))
   
-  if(BMI > 25){
-    _.sortBy(filteredFood, [o => o.raw.fact.energy])
-  }
-  
-  if(HighFat){
-    _.sortBy(filteredFood, [o => o.raw.nutrients.fat])
-  }
-
-  if(HighBP){
-    _.sortBy(filteredFood, [o => o.raw.fact.sodium])
-  }
-
-  if(LowBP){
-    _.sortBy(filteredFood, [o => o.raw.fact.sodium]).reverse()
-  }
-
-  if(HighHR){
-    _.sortBy(filteredFood, [o => o.raw.nutrients.carbohydrate])
-  }
-
-  if(LowHR){
-    _.sortBy(filteredFood, [o => o.raw.fact.sodium]).reverse()
-  }
-
-  if(Diabetes){
-    _.sortBy(filteredFood, [o => o.raw.nutrients.carbohydrate])
+  if (BMI > 25) {
+    return _.sortBy(filteredFood, [o => o.raw.fact.energy])
+  } else if (HighFat) {
+    return _.sortBy(filteredFood, [o => o.raw.nutrients.fat])
+  } else if (HighBP) {
+    return _.sortBy(filteredFood, [o => o.raw.fact.sodium])
+  } else if (LowBP) {
+    return _.sortBy(filteredFood, [o => o.raw.fact.sodium]).reverse()
+  } else if (HighHR) {
+    return _.sortBy(filteredFood, [o => o.raw.nutrients.carbohydrate])
+  } else if (LowHR) {
+    return _.sortBy(filteredFood, [o => o.raw.fact.sodium]).reverse()
+  } else if (Diabetes) {
+    return _.sortBy(filteredFood, [o => o.raw.nutrients.carbohydrate])
   }
 }
