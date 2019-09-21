@@ -42,7 +42,7 @@ const FoodViewingComponent: React.FC<IProps> = props => {
           </Box>
           <Box mt={[120, 100, 80, 0]} p={3}>
             <Box px={2}>
-              <Text fontSize={24} fontWeight={600} pt={2} pb={1}>{data.raw.name}</Text>
+              <Text fontSize={26} fontWeight={600} pt={2} pb={1}>{data.raw.name}</Text>
               {!_.isEmpty(data.raw.desc) ? (
                 <Box py={2}>
                   <Text fontSize={14}>{data.raw.desc}</Text>
