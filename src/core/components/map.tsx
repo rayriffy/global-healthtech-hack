@@ -7,9 +7,11 @@ import { IMapProps } from '../@types/IMapProps'
 const MapComponent: React.FC<IMapProps> = props => {
   const {lat, lon} = props
 
+  const {GOOGLE_API = 'any'} = process.env
+
   return (
     <GoogleMap
-      bootstrapURLKeys={{key: 'AIzaSyBfm7UjWRAaifh3xs4Jrmgdjy_F8tbmxg8'}}
+      bootstrapURLKeys={{key: GOOGLE_API}}
       defaultZoom={16}
       defaultCenter={{ lat: lat, lng: lon }}
     />
